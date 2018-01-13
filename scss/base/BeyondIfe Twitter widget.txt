@@ -1,0 +1,87 @@
+<a class="twitter-timeline" href="https://twitter.com/BeyondIfe">Tweets by BeyondIfe</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<a class="twitter-timeline" data-link-color="#f00" href="https://twitter.com/BeyondIfe">Tweets by BeyondIfe</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<a class="twitter-timeline" data-width="840" data-height="720" href="https://twitter.com/BeyondIfe">Tweets by BeyondIfe</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+		div.story-board{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			top: 25%;
+
+			div.story-pane{
+				width: calc(100% / 3);
+				float: left;
+				padding: 10px;
+
+				div.story-card{
+					width: 100%;
+					height: 270px;
+					position: relative;
+					background-color: darken(#fff, 1%);
+					padding: 5px;
+					margin-bottom: 20px;
+					cursor: pointer;
+					font-family: 'BioRhyme', 'aldrich', sans-serif;
+					border: 1px solid #fff;
+					box-shadow: 0px 4px 2px rgba(#000, .3);
+					transition: all .2s ease;
+
+					img{
+						height: 75%;
+					}
+
+					div.card-footer{
+						width: calc(100% - 10px);
+						text-align: left;
+						height: auto;
+						min-height: 25%;
+						position: absolute;
+						bottom: 5px;
+						padding: 5px;
+						color: #fff;
+						font-size: 120%;
+						background-color: $brand-danger;
+						transition: all .2s ease;
+					}
+
+					span:first-of-type{
+						display: none;
+
+						@media screen and (max-width: 767px) {
+							display: inline;
+							color: #000;
+							text-align: left $force;
+							position: relative;
+							left: 1%;
+							position: absolute;
+						}
+					}
+
+					&:hover{
+						box-shadow: 0px 8px 18px -4px rgba(#000, .2);
+						padding: 1px;
+
+						div.card-footer{
+							width: calc(100% - 2px);
+							bottom: 1px;
+						}
+					}
+				}
+
+				@media screen and (max-width: 991px) {
+					width: 50%;
+				}
+
+				@media screen and (max-width: 767px) {
+					width: 100%;
+				}
+
+				&:hover{
+
+				}
+			}
+		}

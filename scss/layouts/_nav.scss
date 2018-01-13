@@ -1,0 +1,117 @@
+nav{
+	@media screen and (orientation: landscape) {
+		position: absolute;
+		padding: 10px 10px 30px;
+		width: 100%;
+		background-color: #fff;
+		z-index: 5;
+		overflow: auto;
+		top: -50%;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+		transition: top 1s ease-out;
+	}
+
+	ul{
+		text-align: justify;
+
+		li{
+			width: calc(100% / 8 - 20px);
+			position: relative;
+			padding: 5px;
+			display: inline-block;
+			font-family: 'aldrich', sans-serif;
+			margin: 0px 10px 10px;
+			float: left;
+			cursor: pointer;
+
+			a{
+				color: #828282;
+				display: inline-block;
+				width: 100%;
+
+				span{
+					color: red;
+				}
+			}
+
+			&::before{
+				content: "";
+				width: 0%;
+				position: absolute;
+				bottom: 0;
+				height: 3px;
+				right: 0;
+				background-color: #f00;
+				transition: width .25s ease;
+
+				@media screen and (max-width: 1024px) {
+					height: 2px;
+				}
+			}
+
+			&:hover{
+				a{
+					color: red;
+				}
+
+				&::before{
+					width: 100%;
+					left: 0;
+				}
+			}
+
+			@media screen and (orientation: landscape) and (max-width: 1024px) {
+				width: calc(100% / 5 - 20px)
+			}
+
+			@media screen and (orientation: portrait) {
+				width: 100%;
+				padding: 2.5px 1px;
+				font-family: 'aldrich', sans-serif;
+				font-size: 96.3%;
+				margin: 4px;
+			}
+		}
+
+		li.on-point{
+			&::before{
+				content: "";
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				height: 3px;
+				background-color: #f00;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 580px), (orientation: portrait) {
+		position: absolute;
+		z-index: 15;
+		width: 80%;
+		height: 479.5px;
+		padding: 10px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		top: 4%;
+		font-size: 90%;
+		margin-bottom: 0px;
+		transform: translate(-100%, 0%);
+		background-color: darken(rgba(255, 255, 255, 1), 2.5%);
+		box-shadow: 2px 0px 4px rgba(0, 0, 0, .2);
+		transition: transform .25s ease-out;
+
+		@media screen and (min-width: 768px) {
+			top: 3%;
+			font-size: 110%;
+		}
+	}
+
+	@media print {
+		display: none;
+	}
+}

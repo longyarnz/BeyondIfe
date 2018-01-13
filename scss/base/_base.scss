@@ -1,0 +1,83 @@
+@media screen and (max-width : 767px) {
+	@font-face { 
+		font-family: 'Prompt';
+		src: url('../fonts/prompt/Prompt-Regular.ttf') format('truetype');
+	//	font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face { 
+		font-family: 'aldrich';
+		src: url('../fonts/aldrich/Aldrich-Regular.ttf') format('truetype');
+	//	font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face { 
+		font-family: 'josefin sans reg';
+		src: url('../fonts/josefin sans/JosefinSans-Regular.ttf') format('truetype');
+	//	font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face { 
+		font-family: 'josefin sans';
+		src: url('../fonts/josefin sans/JosefinSans-Thin.ttf') format('truetype');
+	//	font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face { 
+		font-family: 'BioRhyme';
+		src: url('../fonts/BioRhyme/BioRhyme-Regular.ttf') format('truetype');
+	//	font-weight: normal;
+		font-style: normal;
+	}
+}
+
+@font-face { 
+	font-family: 'LeviBrush';
+	src: url('../fonts/levibrush/levibrush.ttf') format('truetype');
+	font-style: normal;
+}
+
+html, body{
+	margin : 0 $force;
+	padding : 0 $force;
+	width : 100% $force;
+	overflow: hidden;
+}
+
+title{
+	@media print {
+		display: none;
+	}
+}
+
+.small-width{
+	@media screen and (max-width : 767px){
+		font-size: 12.5px;
+		max-height: auto $force;
+		line-height: 2;
+	}
+}
+
+ul{
+	@extend .small-width;
+	padding : 0;
+	margin : auto $force;
+	list-style : none;
+}
+
+a, a:focus, a:link, a:hover, a:active, a:visited{
+	outline : 0 $force;
+	text-decoration : none $force;
+}
+
+item{
+	display: none;
+}
+
+.fa{
+	cursor : pointer;
+}
